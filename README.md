@@ -33,3 +33,11 @@ A 5 node cluster, each node with 20GB RAM and 4 cores was used to run this appli
 `spark-submit --verbose pagerank_with_persistence.py <input_file_path> <output_file_path> <number_of_partitions> <application_name>`
 
 # Spark_Personalized_PageRank
+
+spark-submit \
+  --class "SimpleApp" \
+  --master local[4] \
+  /usr/spark-3.2.0-bin-hadoop3.2/sparkapp/target/scala-2.12/simple-project_2.12-1.0.jar
+
+
+spark-submit --verbose /home/ubuntu/assignment2/question_a/pagerank_wo_partition.py /user/ubuntu/web-BerkStan.txt pagerank_wo_partition_result
